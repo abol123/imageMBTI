@@ -196,3 +196,18 @@ body {
 .upload-text{
 	font-size: 1rem;
 }
+
+.timer {
+    color: rgb(129, 129, 129);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.count__num {
+    font-weight: 700;
+}
+
+.number {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
