@@ -295,8 +295,9 @@
 }
 $('.result-message').html(resultmessage);
 	for (let i = 0; i < maxPredictions; i++) {
-		(prediction[i].probability.toFixed(2) > 0.1) {
-                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+		const classPrediction =
+			prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+				labelContainer.childNodes[i].innerHTML = classPrediction
 				}
 			}
 		</script>
