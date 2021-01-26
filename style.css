@@ -201,6 +201,7 @@ body {
     color: rgb(129, 129, 129);
     font-weight: 400;
     font-size: 12px;
+    text-align: center;
 }
 
 .count__num {
