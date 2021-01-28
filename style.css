@@ -213,6 +213,7 @@ body {
 
 .count__num {
     font-weight: 700;
+    counter-increment: section;
 }
 
 .number {
