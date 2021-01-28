@@ -148,7 +148,9 @@ body {
 }
 
 .title-icon{
-        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         Width:80%;
 }
 
