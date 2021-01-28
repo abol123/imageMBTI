@@ -367,7 +367,7 @@
             $('.result-message').html(resulttitle + resultsubtitle + resultmessage + resultpop);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
-                if (prediction[i].probability.toFixed(2) > 0.1) {
+                 (prediction[i].probability.toFixed(2) > 0.1) {
                     barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
                 }
 			}
