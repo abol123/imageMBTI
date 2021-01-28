@@ -264,111 +264,93 @@
 				switch(prediction[0].className) {
   case "INTJ(INTp)":
     resulttitle = "INTJ 용의주도한 전략가"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
 	break;
   case "ENTP(ENTp)":
     resulttitle = "ENTP 뜨거운 논쟁을 즐기는 변론가"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ESTJ(ESTj)":
     resulttitle = "ESTJ 엄격한 관리자"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "INFJ(INFp)":
     resulttitle = "INFJ 선의의 옹호자"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ESFJ(ESFj)":
     resulttitle = "ESFJ 사교적인 외교관"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ENTJ(ENTj)":
     resulttitle = "ENTJ 대담한 통솔자"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "INFP(INFj)":
     resulttitle = "INFP 열정적인 중재자"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ENFP(ENFp)":
     resulttitle = "ENFP 재기발랄한 활동가"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ENFJ(ENFj)":
     resulttitle = "ENFJ 정의로운 사회운동가"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ISFJ(ISFp)":
     resulttitle = "ISFJ 용감한 수호자"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ESFP(ESFp)":
     resulttitle = "ESFP 자유로운 영혼의 연예인"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ISTJ(ISTp)":
     resulttitle = "ISTJ 청렴결백한 논리주의자"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ISTP(ISTj)":
     resulttitle = "ISTP 만능 재주꾼"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ISFP(ISFj)":
     resulttitle = "ISFP 호기심 많은 예술가"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "ESTP(ESTp)":
     resulttitle = "ESTP 모험을 즐기는 사업가"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   case "INTP(INTj)":
     resulttitle = "INTP 논리적인 사색가"
-    resultsubtitle = "제작중"
     resultmessage = "제작중"
     resultpop = "제작중"
     break;
   default:
     resulttitle = "알수없음"
-    resultsubtitle = "알수없음"
     resultmessage = "알수없음"
     resultpop = "알수없음"
 }
 	    var title = "<div class='" + prediction[0].className + "-result-Title'>" + resulttitle + "</div>"
-            var subtitle = "<div class='" + prediction[0].className + "-result-subtitle pt-2 pb-2'>" + resultsubtitle + "</div>"
             var message = "<div class='" + prediction[0].className + "-result-message pt-2 pb-2'>" + resultmessage + "</div>"
 	    var pop = "<div class='" + prediction[0].className + "-result-pop pt-2 pb-2'>" + resultpop + "</div>"
-            $('.result-message').html(title + subtitle + message + pop);
+            $('.result-message').html(title + message + pop);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
                     const classPrediction = 
