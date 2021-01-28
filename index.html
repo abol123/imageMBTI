@@ -260,81 +260,115 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resulttitle, resultsubtitle, resultmessage, result-tag;
+				var resulttitle, resultsubtitle, resultmessage, resultpop;
 				switch(prediction[0].className) {
   case "INTJ(INTp)":
     resulttitle = "용의주도한 전략가"
-    resultsubtitle
-
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
 	break;
   case "ENTP(ENTp)":
     resulttitle = "뜨거운 논쟁을 즐기는 변론가"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ESTJ(ESTj)":
     resulttitle = "엄격한 관리자"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "INFJ(INFp)":
     resulttitle = "선의의 옹호자"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ESFJ(ESFj)":
     resulttitle = "사교적인 외교관"
-    resultsubtitle 
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ENTJ(ENTj)":
     resulttitle = "대담한 통솔자"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "INFP(INFj)":
     resulttitle = "열정적인 중재자"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ENFP(ENFp)":
     resulttitle = "재기발랄한 활동가"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ENFJ(ENFj)":
     resulttitle = "정의로운 사회운동가"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ISFJ(ISFp)":
     resulttitle = "용감한 수호자"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ESFP(ESFp)":
     resulttitle = "자유로운 영혼의 연예인"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ISTJ(ISTp)":
     resulttitle = "청렴결백한 논리주의자"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ISTP(ISTj)":
     resulttitle = "만능 재주꾼"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ISFP(ISFj)":
     resulttitle = "호기심 많은 예술가"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "ESTP(ESTp)":
     resulttitle = "모험을 즐기는 사업가"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   case "INTP(INTj)":
     resulttitle = "논리적인 사색가"
-    resultsubtitle
+    resultsubtitle = "제작중"
+    resultmessage = "제작중"
+    resultpop = "제작중"
     break;
   default:
     resulttitle = "알수없음"
-    resultsubtitle
+    resultsubtitle = "알수없음"
+    resultmessage = "알수없음"
+    resultpop = "알수없음"
 }
- var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
-            var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
-            var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
-            $('.result-message').html(title + explain + celeb);
+            var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
+            var explain = "<div class='animal-explain pt-2'>" + resultsubtitle + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultmessage + "</div>"
+	    var pop = "<div class='animal-explain pt-2'>" + resultpop + "</div>"
+            $('.result-message').html(title + explain + celeb + pop);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
                 if (prediction[i].probability.toFixed(2) > 0.1) {
