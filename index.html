@@ -365,7 +365,10 @@
     resultpop = "알수없음"
 				}
 }
-            $('.result-message').html(resulttitle + resultsubtitle + resultmessage + resultpop);
+            $('.result-message').html(resulttitle);
+	    $('.result-message').html(resultsubtitle);
+	    $('.result-message').html(resultmessage);
+	    $('.result-message').html(resultpop);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
                  (prediction[i].probability.toFixed(2) > 0.1) {
