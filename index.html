@@ -260,58 +260,76 @@
 				const prediction = await model.predict(image, false);
 				prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
 				console.log(prediction[0].className);
-				var resultmessage;
+				var resulttitle, resultsubtitle, resultmessage, result-tag;
 				switch(prediction[0].className) {
   case "INTJ(INTp)":
-    resultmessage = "용의주도한 전략가"
+    resulttitle = "용의주도한 전략가"
+    resultsubtitle
+
 	break;
   case "ENTP(ENTp)":
-    resultmessage = "뜨거운 논쟁을 즐기는 변론가"
+    resulttitle = "뜨거운 논쟁을 즐기는 변론가"
+    resultsubtitle
     break;
   case "ESTJ(ESTj)":
-    resultmessage = "엄격한 관리자"
+    resulttitle = "엄격한 관리자"
+    resultsubtitle
     break;
   case "INFJ(INFp)":
-    resultmessage = "선의의 옹호자"
+    resulttitle = "선의의 옹호자"
+    resultsubtitle
     break;
   case "ESFJ(ESFj)":
-    resultmessage = "사교적인 외교관"
+    resulttitle = "사교적인 외교관"
+    resultsubtitle 
     break;
   case "ENTJ(ENTj)":
-    resultmessage = "대담한 통솔자"
+    resulttitle = "대담한 통솔자"
+    resultsubtitle
     break;
   case "INFP(INFj)":
-    resultmessage = "열정적인 중재자"
+    resulttitle = "열정적인 중재자"
+    resultsubtitle
     break;
   case "ENFP(ENFp)":
-    resultmessage = "재기발랄한 활동가"
+    resulttitle = "재기발랄한 활동가"
+    resultsubtitle
     break;
   case "ENFJ(ENFj)":
-    resultmessage = "정의로운 사회운동가"
+    resulttitle = "정의로운 사회운동가"
+    resultsubtitle
     break;
   case "ISFJ(ISFp)":
-    resultmessage = "용감한 수호자"
+    resulttitle = "용감한 수호자"
+    resultsubtitle
     break;
   case "ESFP(ESFp)":
-    resultmessage = "자유로운 영혼의 연예인"
+    resulttitle = "자유로운 영혼의 연예인"
+    resultsubtitle
     break;
   case "ISTJ(ISTp)":
-    resultmessage = "청렴결백한 논리주의자"
+    resulttitle = "청렴결백한 논리주의자"
+    resultsubtitle
     break;
   case "ISTP(ISTj)":
-    resultmessage = "만능 재주꾼"
+    resulttitle = "만능 재주꾼"
+    resultsubtitle
     break;
   case "ISFP(ISFj)":
-    resultmessage = "호기심 많은 예술가"
+    resulttitle = "호기심 많은 예술가"
+    resultsubtitle
     break;
   case "ESTP(ESTp)":
-    resultmessage = "모험을 즐기는 사업가"
+    resulttitle = "모험을 즐기는 사업가"
+    resultsubtitle
     break;
   case "INTP(INTj)":
-    resultmessage = "논리적인 사색가"
+    resulttitle = "논리적인 사색가"
+    resultsubtitle
     break;
   default:
-    resultmessage = "알수없음"
+    resulttitle = "알수없음"
+    resultsubtitle
 }
 $('.result-message').html(resultmessage);
 				for (let i = 0; i < maxPredictions; i++) {
