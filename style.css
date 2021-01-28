@@ -148,9 +148,8 @@ body {
 }
 
 .title-icon{
+        text-align: center;
         Width:80%;
-	line-height: 1.67;
-	Vertical-align: middle;
 }
 
 .title {
