@@ -147,6 +147,13 @@ body {
 	margin-top: 100px;
 }
 
+.title-icon{
+        font-family: nanumsqyarer;
+	line-height: 1.67;
+	text-align: center;
+        Size:2rem;
+}
+
 .title {
 	font-family: nanumsqyarer;
 	line-height: 1.67;
