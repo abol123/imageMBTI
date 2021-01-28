@@ -364,6 +364,7 @@
     resultmessage = "알수없음"
     resultpop = "알수없음"
 }
+			}
             $('.result-message').html(resulttitle + resultsubtitle + resultmessage + resultpop);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
@@ -371,7 +372,7 @@
                     const classPrediction = 
 			  prediction[i].className + ': ' + prediction[i].probability.toFixed(2) * 100 + "%";
 			 labelContainer.childNodes[i].innerHTML = classPrediction;
-                }
+		 }
 			}
 		</script>
 	</body>
