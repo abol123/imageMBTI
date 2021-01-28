@@ -368,7 +368,7 @@
             var subtitle = "<div class='" + prediction[0].className + "-result-subtitle pt-2 pb-2'>" + resultsubtitle + "</div>"
             var message = "<div class='" + prediction[0].className + "-result-message pt-2 pb-2'>" + resultmessage + "</div>"
 	    var pop = "<div class='" + prediction[0].className + "-result-pop pt-2 pb-2'>" + resultpop + "</div>"
-            $('.result-message').html(Title + subtitle + message + pop);
+            $('.result-message').html(title + subtitle + message + pop);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
                     const classPrediction = 
