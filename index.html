@@ -364,10 +364,10 @@
     resultmessage = "알수없음"
     resultpop = "알수없음"
 }
-	    var title = "<div class= + prediction[0].className>" + resultTitle "</div>"
-            var subtitle = "<div class= + prediction[0].className>" + resultCeleb "</div>"
-            var message = "<div class= + prediction[0].className>" + resultCeleb "</div>"
-	    var celeb = "<div class= + prediction[0].className>" + resultCeleb "</div>"
+	    var title = "<div class= "+ prediction[0].className">" + resultTitle "</div>"
+            var subtitle = "<div class= "+ prediction[0].className">" + resultCeleb "</div>"
+            var message = "<div class= "+ prediction[0].className">" + resultCeleb "</div>"
+	    var celeb = "<div class= "+ prediction[0].className">" + resultCeleb "</div>"
             $('.result-message').html(title + subtitle + message + celeb);
             var barWidth;
             for (let i = 0; i < maxPredictions; i++) {
